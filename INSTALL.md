@@ -57,7 +57,33 @@ This is one reason the ORB exists.
 
 ---
 
-## 3. The core objects (short definitions)
+## 3. Storage discovery (do this before creating files)
+
+**Never assume local computer write access.**  
+Many users (especially mobile or voice-only) will not have it.
+
+Before creating any files the AI should:
+
+1. Discover what storage it can actually reach (Google Drive, GitHub, Dropbox, local, etc.).
+2. Ask the user which location they prefer.
+3. Confirm whether the files should stay private.
+
+### Practical guidance
+
+| Storage        | Speed | Privacy by default      | Recommendation                                      |
+|----------------|-------|-------------------------|-----------------------------------------------------|
+| Google Drive   | Fast  | Private (your account)  | Best default for the living Dragon                  |
+| GitHub         | Good  | Public unless private   | Use for the method; use a **private** repo for personal data |
+| Dropbox / other| Varies| Usually private         | Fine if you already use it                          |
+| Local computer | Fast  | Fully private           | Only if the AI actually has write access            |
+
+**Recommended default for most new users:**  
+Put the living Dragon (Shard, ORBs, personal Crystals, journals) on **Google Drive**.  
+Use GitHub mainly for the clean public method, or a private repo if you also store personal files there.
+
+---
+
+## 4. The core objects (short definitions)
 
 **Shard**  
 The AI-agnostic boot layer and knowledge contract.  
@@ -96,9 +122,9 @@ All parts of Dragon are versioned and linkable.
 
 ---
 
-## 4. Minimum install set
+## 5. Minimum install set
 
-Copy these files into a location you control:
+Once the storage location is chosen, copy or create these files:
 
 | File | Purpose |
 |------|---------|
@@ -119,16 +145,16 @@ Recommended folders (with their init Crystals):
 
 ---
 
-## 5. First-run sequence (voice-friendly)
+## 6. First-run sequence (voice-friendly)
 
 An AI should walk a new user through these steps, pausing for confirmation:
 
-1. Tell the origin story (Section 1 above).
+1. Tell the origin story (Section 1).
 2. State agency and the Global Write Flow.
 3. Explain privacy, sensitive information, and license responsibility.
-4. Explain the ORB (what it is, that it starts in artifacts, that it is optional, that it helps reveal limits).
-5. Explain the Shard and Looking Glass briefly.
-6. Ask where the user’s Dragon should live.
+4. Perform storage discovery (Section 3) and agree on a location.
+5. Explain the ORB (what it is, that it starts in artifacts, that it is optional, that it helps reveal limits).
+6. Explain the Shard and Looking Glass briefly.
 7. Offer to create the first ORB / First-Experience record (show exact destination, wait for permission).
 8. Ask what the user wants to do next.
 
@@ -136,7 +162,7 @@ The fact that this sequence occurred, plus any choices the user made, should be 
 
 ---
 
-## 6. After a few dozen interactions
+## 7. After a few dozen interactions
 
 You should expect:
 
@@ -149,7 +175,7 @@ At that point the system is no longer a blank install — it is *your* Dragon.
 
 ---
 
-## 7. Organizational choice (PARA)
+## 8. Organizational choice (PARA)
 
 PARA (Projects / Areas / Resources / Archives) is **optional**.  
 
@@ -158,7 +184,7 @@ See the Structure-Crystal for guidance if you choose PARA.
 
 ---
 
-## 8. Updating or migrating
+## 9. Updating or migrating
 
 - Keep core method files under clear versioning or dated backups.
 - Personal Crystals, ORBs, and journals stay under your control.
@@ -168,4 +194,4 @@ See the Structure-Crystal for guidance if you choose PARA.
 
 **Success criterion for an install**
 
-A fresh AI instance can orient from the Shard and this INSTALL file without the human having to re-explain the entire architecture, while still respecting agency, write permissions, and privacy at every step.
+A fresh AI instance can orient from the Shard and this INSTALL file without the human having to re-explain the entire architecture, while still respecting agency, write permissions, privacy, and actual available storage at every step.

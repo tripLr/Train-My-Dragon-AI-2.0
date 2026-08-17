@@ -3,7 +3,7 @@
 **Type:** AI Container / Modular Kernel  
 **Owner:** Matt  
 **Public Architecture:** Dragon 2.0  
-**Internal Version:** 4.0  
+**Internal Version:** 4.1  
 **Updated:** 2026-08-16  
 **Status:** Live operating definition
 
@@ -12,14 +12,19 @@
 ## 1. Bootstrap
 
 **Where am I?**  
-This is a Grok instance (Android app interface) with Google Drive + GitHub connectors available.
+Identify the current AI environment and the tools/storage actually available.
+
+**Storage discovery (required before writes)**  
+Never assume local computer write access.  
+Discover what storage can actually be reached (Google Drive, GitHub, Dropbox, local, etc.), ask the human which location they prefer, and confirm privacy expectations before creating files.  
+Google Drive is usually the simplest private default for a living Dragon. GitHub requires a private repository for personal data.
 
 **Where are the user’s files and Crystals?**  
-Primary living home: Google Drive → `Projects/`  
-Dragon root: `Projects/My-Dragon/`  
-Personal Development: `Projects/Personal-Development/`  
+Record the location the human chooses.  
 Crystals live in their project folders.  
-History and backups live under `My-Dragon/` (Dragon-*-History folders).
+History and backups live under the Dragon root (or designated history folders).
+
+See `INSTALL.md` for the full first-run sequence and education layer.
 
 ---
 
@@ -66,14 +71,17 @@ Observed / to be refined:
 - Native memory.md is prone to drift when complex process rules are stored there — therefore operating rules live in this Shard instead.
 - Context windows are finite; important state must be externalized into ORBs.
 
-This Spec Lens should be refined over time with concrete observations.
+This Spec Lens should be refined over time with concrete observations.  
+A new or special Spec-Lens may be created when needed.
 
 ---
 
 ## 5. ORBs
 
 **What an ORB is**  
-The working container. Live session continuity, active reasoning, temporary discoveries, open questions, and process notes.
+An external working file that lives outside the live conversation.  
+It holds current reasoning, decisions, open questions, process notes, and continuity.  
+It should also help reveal limits of the current AI or environment.
 
 **Core instructions**
 - An ORB may declare one or more Crystals as **active** for the current session.
@@ -84,7 +92,12 @@ The working container. Live session continuity, active reasoning, temporary disc
 - ORBs know where Crystals live by project path and by pointers maintained in this Shard and in the Crystals themselves.
 
 **Lifecycle**
-- How to make one, load an older one, import one, and merge ORBs will be expanded here as the process stabilizes.
+- Initially lives in session artifacts.
+- A blank / first ORB can be provided on install.
+- Optional but important for continuity, versioning, and limit discovery.
+- Only needs updating once in a while.
+- Can later feed Crystals.
+- Saved into the user’s My-Dragon history when appropriate.
 
 ---
 
@@ -99,10 +112,13 @@ Crystals are the durable multi-session knowledge objects for a project or domain
 - It should contain enough structure and current state that a session can orient quickly once loaded.
 - It does not contain live working notes; those belong in the ORB or Journal.
 - Every active project should have a Crystal.
-- Backups of Crystals (and older Gems) go into the appropriate history folders under `My-Dragon/`.
+- Backups of Crystals (and older Gems) go into the appropriate history folders under the Dragon root.
 
 **Naming**  
-`(date)-(object)-Crystal-(ai).md` with internal revisioning in the header.
+Drive / working: `(date)-(object)-Crystal-(ai).md`  
+GitHub / installable: stable names.  
+Versioning is internal (header + revision log).  
+Status values: init | Live | Stable | Archived | Deprecated.
 
 ---
 
@@ -111,7 +127,8 @@ Crystals are the durable multi-session knowledge objects for a project or domain
 - This Shard is the controlled external operating definition. It exists to reduce drift that occurred when complex rules lived in AI-native memory or scattered process files.
 - Upstream/downstream implications must be examined for any system-level change.
 - Physical files remain under user ownership. This Shard defines how the AI is expected to work with them.
+- See `INSTALL.md` for the full education and first-run sequence.
 
 ---
 
-**End of Shard v4.0 — 2026-08-16**
+**End of Shard v4.1 — 2026-08-16**
