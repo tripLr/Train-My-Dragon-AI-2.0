@@ -11,6 +11,7 @@
 
 ## Standing Notes (keep these)
 
+- Before any write or trash the AI must output a WRITE / TRASH CHECK block with exact targets and wait for confirmation.
 - This ORB lives outside the live conversation.
 - It holds working continuity and should help reveal limits of the current AI or environment.
 - When early context disappears from what the AI can see, note it here — the human may notice context drift first.

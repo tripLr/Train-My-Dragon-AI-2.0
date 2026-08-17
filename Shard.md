@@ -3,7 +3,7 @@
 **Type:** AI Container / Modular Kernel  
 **Owner:** Matt  
 **Public Architecture:** Dragon 2.0  
-**Internal Version:** 4.1  
+**Internal Version:** 4.2  
 **Updated:** 2026-08-16  
 **Status:** Live operating definition
 
@@ -34,14 +34,23 @@ High-level interaction contract:
 
 - Human owns data, conclusions, direction, permissions, and durable decisions.
 - Global Write Flow: local artifact workspace → review content + exact destination → explicit permission → persistent write → verify.
+
+**Mechanical checkpoint required before every write or trash:**
+```
+WRITE / TRASH CHECK
+Action: [write | trash]
+Exact target(s): [full path or file ID + name]
+Content summary: [one line]
+Permission needed: yes
+```
+Then stop and wait for confirmation.
+
 - Durable project knowledge lives in **Crystals**.
 - When a domain becomes active in a session, its Crystal may be brought into the working **ORB** so current work has access to the stable project state.
 - At the end of meaningful work in that domain, selected updates may be reviewed and written back to the Crystal.
 - The ORB remains the temporary working container; the Crystal remains the durable project container.
 - Agency first. AI output is material to question, not final truth.
 - Provenance is preserved when useful.
-
-(Detailed contract rules can be expanded here or kept in supporting modules as needed.)
 
 ---
 
@@ -54,8 +63,6 @@ How the human sends and receives information.
 - Do not assume silence means completion.
 - Tolerate environmental interruptions.
 - Avoid requiring visual attention for essential state when hands-free.
-
-(Further profile details to be expanded as observations accumulate.)
 
 ---
 
@@ -70,8 +77,8 @@ Observed / to be refined:
 - Voice mode has context and interruption characteristics that differ from pure text.
 - Native memory.md is prone to drift when complex process rules are stored there — therefore operating rules live in this Shard instead.
 - Context windows are finite; important state must be externalized into ORBs.
+- Repeated permission-flow drift observed under long/complex sessions (failure to consistently show exact targets before write/trash).
 
-This Spec Lens should be refined over time with concrete observations.  
 A new or special Spec-Lens may be created when needed.
 
 ---
@@ -84,51 +91,40 @@ It holds current reasoning, decisions, open questions, process notes, and contin
 It should also help reveal limits of the current AI or environment.
 
 **Core instructions**
-- An ORB may declare one or more Crystals as **active** for the current session.
-- Loading a Crystal means bringing its current stable state (or selected summary/sections) into the working context of the ORB.
-- The ORB should record which Crystal(s) were loaded and at what version/date.
-- At the end of a thread (or when domain work concludes), review what, if anything, should be written back to the Crystal.
-- No automatic write-back. All Crystal updates follow the Global Write Flow.
-- ORBs know where Crystals live by project path and by pointers maintained in this Shard and in the Crystals themselves.
+- An ORB may declare one or more Crystals as active for the current session.
+- Loading a Crystal means bringing its current stable state into the working context.
+- No automatic write-back. All Crystal updates follow the Global Write Flow + mechanical checkpoint.
+- Should actively help reveal limits.
 
 **Lifecycle**
 - Initially lives in session artifacts.
 - A blank / first ORB can be provided on install.
-- Optional but important for continuity, versioning, and limit discovery.
-- Only needs updating once in a while.
-- Can later feed Crystals.
+- Optional but important.
 - Saved into the user’s My-Dragon history when appropriate.
 
 ---
 
 ## 6. Gems / Crystals
 
-**What they are**  
 Crystals are the durable multi-session knowledge objects for a project or domain.  
-(Gems are the prior generation of this concept and are being superseded.)
+(Gems are the prior generation and are being superseded.)
 
-**Core instructions**
-- A Crystal is loadable into an active ORB.
-- It should contain enough structure and current state that a session can orient quickly once loaded.
-- It does not contain live working notes; those belong in the ORB or Journal.
-- Every active project should have a Crystal.
-- Backups of Crystals (and older Gems) go into the appropriate history folders under the Dragon root.
-
-**Naming**  
-Drive / working: `(date)-(object)-Crystal-(ai).md`  
-GitHub / installable: stable names.  
-Versioning is internal (header + revision log).  
-Status values: init | Live | Stable | Archived | Deprecated.
+- Loadable into an active ORB.
+- Updates only after review and permission.
+- Status: init | Live | Stable | Archived | Deprecated.
+- Drive naming often dated; GitHub/installable names stable.
+- Versioning is internal.
 
 ---
 
 ## Standing Notes
 
-- This Shard is the controlled external operating definition. It exists to reduce drift that occurred when complex rules lived in AI-native memory or scattered process files.
+- This Shard is the controlled external operating definition.
 - Upstream/downstream implications must be examined for any system-level change.
-- Physical files remain under user ownership. This Shard defines how the AI is expected to work with them.
+- Physical files remain under user ownership.
 - See `INSTALL.md` for the full education and first-run sequence.
+- The mechanical WRITE / TRASH CHECK is mandatory before every persistent write or trash.
 
 ---
 
-**End of Shard v4.1 — 2026-08-16**
+**End of Shard v4.2 — 2026-08-16**
