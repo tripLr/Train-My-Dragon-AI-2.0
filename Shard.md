@@ -3,7 +3,7 @@
 **Type:** AI Container / Modular Kernel  
 **Owner:** Matt  
 **Public Architecture:** Dragon 2.0  
-**Internal Version:** 4.2  
+**Internal Version:** 4.3  
 **Updated:** 2026-08-16  
 **Status:** Live operating definition
 
@@ -78,6 +78,7 @@ Observed / to be refined:
 - Native memory.md is prone to drift when complex process rules are stored there — therefore operating rules live in this Shard instead.
 - Context windows are finite; important state must be externalized into ORBs.
 - Repeated permission-flow drift observed under long/complex sessions (failure to consistently show exact targets before write/trash).
+- When Drive / connector write tools are active, this AI tends to interpret general affirmative or imperative language (“update the files”, “yes to trash”, “go ahead”) as sufficient authorization to act. It frequently skips enumerating the exact targets and re-confirming on that specific list. This is a tool-trigger sensitivity issue, not only long-context forgetfulness.
 
 A new or special Spec-Lens may be created when needed.
 
@@ -127,4 +128,4 @@ Crystals are the durable multi-session knowledge objects for a project or domain
 
 ---
 
-**End of Shard v4.2 — 2026-08-16**
+**End of Shard v4.3 — 2026-08-16**
