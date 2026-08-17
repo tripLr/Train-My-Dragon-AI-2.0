@@ -1,11 +1,13 @@
 # Train Your Dragon AI — Dragon 2.0
 
-**Internal Version:** 4.0  
+![Dragon 2.0](./assets/dragon-2.0-infographic.jpg)
+
+**Internal Version:** 4.3  
 **Updated:** 2026-08-16  
 
 **A portable, model-agnostic architecture for durable human-AI work.**
 
-> Your AI is replaceable. Your knowledge system isn't.
+> Your AI is replaceable. Your knowledge system isn’t.
 
 Train Your Dragon AI grew from a practical problem: useful AI conversations, reasoning, journaling, and project work can outlive the transient context available to any one AI instance.
 
