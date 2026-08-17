@@ -142,6 +142,25 @@ Recommended folders (with their init Crystals):
 - `Dragon-Lenses/`
 - `Dragon-Skills/`
 - `Dragon-Structure/`
+- `Inbox/` (optional catch-all — see below)
+
+## Inbox (catch-all)
+
+Many people start with scattered notes across threads, laptops, and cloud drives.
+
+Dragon includes an optional **Inbox** folder as a low-pressure catch-all:
+
+```
+My-Dragon/
+└── Inbox/
+    ├── (files you drop as you find them)
+    └── inbox-gem.md
+```
+
+You can batch-upload material into the Inbox without organizing it immediately.  
+Later, review the Inbox and move durable pieces into the right Crystal or project location.
+
+See `Inbox/inbox-gem.md` for the handling rules.
 
 ---
 
