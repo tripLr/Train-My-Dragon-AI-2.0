@@ -4,11 +4,15 @@
 **Author:** Matt (tripLr)  
 **Date:** 2026-08-21  
 **Companion:** `ORIGIN.md`  
-**Staged from:** `My-Dragon/dev/2026-08-21_Context-Window-and-ORB-Report.md`
+**Published:** `tripLr/Train-My-Dragon-AI-2.0` — `CONTEXT_WINDOW_AND_ORB.md`
 
-This is a field report, not a product claim. It records what a long voice-and-text development session actually did to an AI context window, and why an external last-state file (the ORB) became the recovery method.
+I broke Grok and didn’t care.
+
+This is a field report, not a product claim. It records what a long voice-and-text development window actually did to an AI context window, and why an external last-state file (the ORB) became the recovery method.
 
 Do not assume any AI has complete access to a user’s full session — in text or in voice.
+
+Typical chatbot visits last minutes. This was a window: started the previous morning, lost, recovered, and kept for 12+ hours.
 
 ---
 
@@ -18,7 +22,7 @@ Do not assume any AI has complete access to a user’s full session — in text 
 
 This report is the later measurement.
 
-A hunch that the context window was failing on a very long AI-development thread was tested in one Grok window on 2026-08-21 (Android app: Ask / Imagine / Build). The window began at Shard v4.3 with an empty sandbox and ended the same day at Shard v4.8 with Drive writes, a domain Crystal, and an updated ORB.
+A hunch that the context window was failing on a very long AI-development thread was tested in one Grok window (Android app: Ask / Imagine / Build). The window began at Shard v4.3 with an empty sandbox. It ended after recovery at Shard v4.8 with Drive writes, a domain Crystal, and an updated ORB.
 
 The hunch was correct. The stores were not one store.
 
@@ -47,7 +51,7 @@ The first user turn was still in the phone history. The UI would not show it unt
 
 ### 2. Context window compaction
 
-A long development day does not stay fully addressable. Exact wording from the middle is the first to go. Last-state must live outside the chat.
+A long development window does not stay fully addressable. Exact wording from the middle is the first to go. Last-state must live outside the chat.
 
 ### 3. Voice is not the same Spec-Lens as text
 
@@ -64,6 +68,8 @@ Same app, different working sets. Storage in Build does not put knowledge back i
 ### 6. Same-name Drive writes create ghosts
 
 The connector can upload, download, list, trash. It cannot move a file to a new parent. “Move” is **copy-then-trash** (new ID in the target; old ID in trash). Uploading `Shard.md` beside an existing `Shard.md` makes two files. The first 4.8 upload in this window used the wrong local body. The wrong copies were trashed. The second write was verified.
+
+This is why the write flow exists: draft locally, name the exact target, confirm, then write.
 
 ### 7. “Latest” is the wrong window
 
