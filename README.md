@@ -3,12 +3,13 @@
 # Train Your Dragon AI — Dragon 2.0
 
 **External name:** README.md  
-**Internal name:** 2026-08-22-1834-readme-object  
+**Internal name:** 2026-08-22-1952-readme-object  
 **Object type:** system  
 **File type:** system  
 **Type:** My-Dragon Object (Primary Project Source of Truth)  
 **Status:** Live  
-**Revised:** 2026-08-22-1834  
+**Revised:** 2026-08-22-1952  
+**Note:** Live rollout update — bi-directional graph rules + history location + archive-first sequence  
 
 **A portable, model-agnostic architecture for durable human-AI work.**  
 **Category:** Adaptable Project Container
@@ -78,6 +79,7 @@ MIT — see `LICENSE`.
 | `My-Dragon /` | Live system root (README, Shard, ORIGIN, INSTALL, etc.) |
 | `My-Dragon / dev /` | Owner’s working and testing method for building and iterating on the container. Not required for others. Used for safe development before promoting changes to root and public repo. |
 | `My-Dragon / Dragon-Orb-History /` | ORB history (anti-drift layer). Working ORBs never stay in root. |
+| `My-Dragon / Dragon-Object-History /` | History for durable system Objects (non-ORB). |
 | Artifact / sandbox | Ephemeral working area. Full read-write. Not durable storage. |
 
 These paths are the operational map. The Shard carries matching definitions so any instance can orient from either file.
@@ -171,11 +173,13 @@ That is why the Stack appears after the Object Definitions: once you know what a
 | 2026-08-22 | source | README | Shard.md | operating | live rules + Rule Graph | live |
 | 2026-08-22 | source | README | ORIGIN.md | cites | full narrative history | live |
 | 2026-08-22 | source | README | LICENSE | cites | legal | live |
-| 2026-08-22 | source | README | First-ORB-Template.md | cites | startup pattern | live |
+| 2026-08-22 | source | README | Blank-ORB-Template.md | cites | sole blank ORB template | live |
 | 2026-08-22 | source | README | INSTALL.md | cites | first-run details | live |
 | 2026-08-22 | source | README | Projects / Personal-Development Crystal | downstream | PD domain | live |
-| 2026-08-22 | source | README | Dragon-Orb-History | cites | anti-drift layer | live |
+| 2026-08-22 | source | README | Dragon-Orb-History | cites | ORB history location | live |
+| 2026-08-22 | source | README | Dragon-Object-History | cites | object-type history location | live |
 | 2026-08-22 | source | README | My-Dragon / dev / | defines | owner working / testing method for building the container | live |
+| 2026-08-22 | development | README | Git-Status-Object.md | tracks | /dev working-tree status | development |
 | 2026-08-22 | planned | README | Journal Crystal | planned | future object | planned |
 | 2026-08-22 | planned | README | Subject graph object | planned | future object | planned |
 
@@ -189,7 +193,7 @@ That is why the Stack appears after the Object Definitions: once you know what a
 1. Read this README first (understand the project).
 2. Load the live Shard (operating rules).
 3. Check for a sandbox ORB for this window.
-4. If none → load First-ORB-Template and review newest history ORB.
+4. If none → load Blank-ORB-Template and review newest history ORB.
 5. Once an ORB is loaded, treat it as the primary source for the rest of the window.
 6. Only ask “which window / which project” when the loaded source material does not already answer the question.
 
@@ -253,6 +257,7 @@ New information brought into the sandbox may optionally receive Object treatment
 - Graphs may point to internal sections of the same material (Part 1, 2, 3, etc.).
 - Notes and journals created from material may link **both directions** to the source Object.
 - The same bidirectional linking applies to journals and to sections within them.
+- **Bi-directional graph growth (live rollout):** Edges should grow organically in both directions as Objects are touched. Reverse Edges are added incrementally during normal updates; full bi-directionality is not required in a single pass.
 - **Any structural change** (including new or modified graph Edges) follows Write Protection.  
   Do not automatically create or update graph links.
 - A graph Edge is a structural change to an Object. New instances load this rule via README + Shard Edge; ORBs record window activity only and do not restate the law.
@@ -272,10 +277,24 @@ sandbox → review content + exact destination → explicit permission → write
 Applies to file creation, content writes, and structural changes (including graph Edges).  
 Do not automatically create or update graph links.
 
+**Archive-first edit sequence (hard)**  
+On any durable system Object edit:
+1. Pull live file into sandbox as draft
+2. Copy live file into the object-type history folder with dated name
+3. Confirm archive exists and is readable
+4. Edit the sandbox draft
+5. Trash the original (trash = delete under current connectors)
+6. Write new version under stable external name with updated internal HHMM revision
+
+**History location**  
+Each object type keeps history in its own history folder living next to the live objects:
+- ORBs → `Dragon-Orb-History`
+- Other durable Objects → `Dragon-Object-History`
+
 **Graph discipline**
-- kind: yours · insight · source · planned
+- kind: yours · insight · source · planned | development
 - status flip: draft → reviewed → live
-- Containers point both ways
+- Containers point both ways (bi-directional growth is incremental / live rollout)
 - Replace, don’t orphan
 - After Drive write, stamp file ID on the graph
 - Check sandbox first for an existing Orb; do not spawn parallel orbs for the same window
@@ -302,5 +321,5 @@ Do not automatically create or update graph links.
 
 ---
 
-**End of 2026-08-22-1834-readme-object**  
+**End of 2026-08-22-1952-readme-object**  
 (External name when live: README.md)
