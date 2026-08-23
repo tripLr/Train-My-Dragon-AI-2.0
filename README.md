@@ -1,119 +1,306 @@
+> Your AI is replaceable. Your knowledge system isn't.
+
 # Train Your Dragon AI — Dragon 2.0
 
-![Dragon 2.0](./assets/dragon-2.0-infographic.jpg)
+**External name:** README.md  
+**Internal name:** 2026-08-22-1834-readme-object  
+**Object type:** system  
+**File type:** system  
+**Type:** My-Dragon Object (Primary Project Source of Truth)  
+**Status:** Live  
+**Revised:** 2026-08-22-1834  
 
-**Internal Version:** 4.3  
-**Updated:** 2026-08-16  
-
-**A portable, model-agnostic architecture for durable human-AI work.**
-
-> Your AI is replaceable. Your knowledge system isn’t.
-
-Train Your Dragon AI grew from a practical problem: useful AI conversations, reasoning, journaling, and project work can outlive the transient context available to any one AI instance.
-
-Dragon keeps continuity outside the model while allowing different humans, AI systems, interfaces, and storage systems to work together.
+**A portable, model-agnostic architecture for durable human-AI work.**  
+**Category:** Adaptable Project Container
 
 ---
 
-## Important: Privacy, Responsibility & License Awareness
+## Why this exists
 
-**This project was created for voice journaling and research.**  
-The two original active projects were Personal Development and Dragon training / architecture work.
+Useful AI conversations, reasoning, journaling, and project work can outlive the transient context available to any one AI instance.
 
-**Personal notes are always private.**  
-This method does not claim ownership of your personal data.
+Dragon keeps continuity **outside** the model so that different humans, AI systems, interfaces, and storage systems can work together without losing the knowledge system.
 
-### Sensitive information
-
-An ORB is optional.  
-If you do not want sensitive information (including anything that may be covered by HIPAA or similar rules) left on the AI side, you must:
-
-1. Transfer the files to storage you control, and  
-2. Delete them from the artifact workspace.
-
-You may run private instances where they are available. My-Dragon can run inside those instances. You remain responsible for removing private or sensitive information.
-
-### What you must be aware of
-
-When using this system with any AI, be aware that information may exist in:
-
-- The AI’s native memory / personalization features
-- The artifact / local workspace used during a session
-- Conversation or instance history saved by the app or platform
-
-### License responsibility
-
-**Know the model’s license and terms before continuing.**
-
-AI provider licenses and terms of use can be broad about data use, retention, training, and sharing.  
-You are responsible for reviewing the license and terms of any AI you use with this system.
-
-This project is a method and architecture under your control. It is not a hosted service and does not change the terms of the AI platforms you choose to use.
+The two original active projects were Personal Development and Dragon training / architecture work. Personal notes are always private.
 
 ---
 
-## Values Layer
+## Dragon Creed 2.0
 
-See **`Dragon-Creed-2.0.md`** for the short set of weighted principles that orient the human–AI partnership (Agency First, External Continuity, Challenge to Improve, Connection Before Correction, and others).
+A short set of weighted principles for human–AI partnership.  
+These principles constrain one another. No single principle should be applied in isolation.
 
-The Creed complements the operating rules in the Shard. It does not replace them.
+1. **Agency First** — The human owns the data, decisions, direction, and durable knowledge. Personal notes remain private. AI contributes speed, structure, pattern recognition, questioning, and iteration.
+2. **External Continuity** — Important state and operating rules live outside any single AI instance.
+3. **Challenge to Improve** — Challenge ideas to test for failure and learn from it.
+4. **Trust** — Clear communication builds trust. Clarify intent, name errors, and prefer accurate output. Clear intent includes recognizing when intent has already been established by just-loaded source material.
+5. **Versioned Knowledge** — Preserve the path of understanding when interpretations change.
 
----
-
-## Core Structure
-
-Dragon is organized as layered containers:
-
-- **Physical container** — the user’s real files and folders
-- **AI container (Shard)** — modular kernel / operating definition
-- **ORB** — working container for live session continuity
-- **Crystal** — durable project / idea container
-
-The Shard holds the current operating rules (Looking Glass principles, Ocular, Spec-Lens, ORB and Crystal handling).  
-Crystals hold durable project knowledge and can be loaded into an active ORB. Updates return only after review.
+The Creed orients the partnership. The Rule Graph (inside the Shard) makes the orientation operational.
 
 ---
 
-## Organization (PARA is optional)
+## Rule Graph (summary)
 
-PARA (Projects • Areas • Resources • Archives) is the organizational pattern used by the original author.  
+Full live rules live in the Shard (Looking Glass). Summary for orientation:
 
-It is **not required**.  
-
-A user may organize information differently. Dragon should adapt to the user’s chosen structure rather than force one folder system.  
-
-See `Dragon-Structure/Structure-Crystal.md` for the rationale and guidance on how My-Dragon can sit inside a PARA layout when that choice is made.
-
----
-
-## Global Write Flow
-
-`local artifact workspace → review content + exact destination → explicit permission → persistent write → verify`
-
-Drafting and modification happen locally first. Before writing to Drive, GitHub, or another persistent store, review the content and intended destination with the user and obtain explicit permission.
-
----
-
-## Model-agnostic by design
-
-Dragon must not depend on one AI provider.
-
-Models, companies, interfaces, context windows, and storage systems will change.
-
-A different AI should require a different or updated Spec-Lens — not reconstruction of the user’s knowledge system.
+1. Agency  
+2. Source  
+3. Output  
+4. Clarify Intent  
+5. Error Handling  
+6. Clear Truth  
+7. Write Protection — always: sandbox → review + exact destination → explicit permission → write → verify
 
 ---
 
 ## Origin
 
-Dragon began with voice-based personal-development journaling during commercial trucking work and evolved as practical limits in private training access, AI context, continuity, storage, and repeated instance training were discovered.
-
-See `ORIGIN.md` for the full story, including the 16 August 2026 simplification.
+Dragon began with voice journaling during commercial trucking work.  
+See `ORIGIN.md` for the full story, including the 21 August 2026 Rule Graph and the 22 August 2026 object-graph shift.
 
 ---
 
-## License
+## Privacy & License
 
+Personal notes are always private.  
+If sensitive information must not remain on the AI side, move it to storage you control and remove it from the artifact workspace.
+
+You are responsible for the terms of any AI you use with this system.  
 MIT — see `LICENSE`.
 
-The public method and documentation are separate from a user’s private living data and knowledge stores.
+---
+
+## Core Drive paths
+
+| Path | Role |
+|------|------|
+| `My-Dragon /` | Live system root (README, Shard, ORIGIN, INSTALL, etc.) |
+| `My-Dragon / dev /` | Owner’s working and testing method for building and iterating on the container. Not required for others. Used for safe development before promoting changes to root and public repo. |
+| `My-Dragon / Dragon-Orb-History /` | ORB history (anti-drift layer). Working ORBs never stay in root. |
+| Artifact / sandbox | Ephemeral working area. Full read-write. Not durable storage. |
+
+These paths are the operational map. The Shard carries matching definitions so any instance can orient from either file.
+
+---
+
+## Object Definitions
+
+Every durable piece of the system is an **Object**.
+
+Objects are named **Crystals**, **Shards**, **Knobs**, and **Gems**.  
+These names represent layers in a personal AI hoard of linked, versioned knowledge.
+
+An Object has:
+- Stable external name
+- Internal revision name when versioned (`YYYY-MM-DD-HHMM-name-object`)
+- **Object type** — system | user
+- **File type** — system | coursework | reference | journal | note | other
+- Dragon Stack (Role · Facets · Edges · Return · Evidence rule)
+- Human-readable body
+
+**Object type**
+- **system** — core architecture files (README, Shard, INSTALL, LICENSE, templates, skills infrastructure)
+- **user** — coursework, journals, notes, personal reference, PD materials
+
+**File type** describes what the file *is* (system, coursework, reference, journal, note, other).
+
+Objects point. They do not copy the layer below.
+
+### Object creation rule
+Every Object carries:
+1. A short, readable description (enough for human and AI to act without opening another file)
+2. A pointer to the full treatment rule when one exists (so detail stays in one place and does not drift)
+3. A small graph (Edges) — required for the Object to work
+
+Do not replace the short description with only a pointer.  
+Do not duplicate the full rule inside every Object.  
+Without its graph, an Object cannot orient or link inside the hoard.
+
+**Known system Objects**
+| Object | External name | Job |
+|--------|---------------|-----|
+| README | `README.md` | Primary project source of truth |
+| Shard | `Shard.md` | Live operating rules / AI container |
+| ORB | dated file in history | Thin last-state for one window |
+| Crystal | named | Durable project map |
+| Opel-Knob | named | Grab-point for one week/campaign |
+| Gem | named | Older query object (being replaced) |
+
+**Revisioning**
+- Live / external name stays stable
+- Internal or history copies use the dated form
+- Keeps GitHub and file browsers clean while preserving history
+
+---
+
+## Description of Dragon Stack
+
+The Dragon Stack is a simple AI graph pointer that every durable system Object carries.
+
+It can version:
+- itself
+- the information it links to
+- its Edges
+- its Facets
+
+It tells both human and AI, at a glance:
+- **Role** — what this Object is for
+- **Facets** — the main topics or concerns it covers
+- **Edges** — the explicit relationships (pointers) to other Objects
+- **Return** — which Object is the home / authority for this material
+- **Evidence rule** — how claims and references are handled (usually “point only, do not copy”)
+
+The Stack is not the full content of the file.  
+It is the map that sits on top so any instance can orient quickly without having to re-read the entire body.
+
+When a new AI instance loads the system, it reads the Stack first.  
+That is why the Stack appears after the Object Definitions: once you know what an Object is, the Stack shows you how this particular Object is wired.
+
+---
+
+## Dragon Stack
+
+**Role:** Primary project source of truth for both human and AI. Describes what Dragon is, why it exists, and how the core processes work.  
+**Facets:** purpose | creed | rules | objects | boot | process | privacy  
+
+**Edges**
+
+| date | kind | from | to | relation | why | status |
+|---|---|---|---|---|---|---|
+| 2026-08-22 | source | README | Shard.md | operating | live rules + Rule Graph | live |
+| 2026-08-22 | source | README | ORIGIN.md | cites | full narrative history | live |
+| 2026-08-22 | source | README | LICENSE | cites | legal | live |
+| 2026-08-22 | source | README | First-ORB-Template.md | cites | startup pattern | live |
+| 2026-08-22 | source | README | INSTALL.md | cites | first-run details | live |
+| 2026-08-22 | source | README | Projects / Personal-Development Crystal | downstream | PD domain | live |
+| 2026-08-22 | source | README | Dragon-Orb-History | cites | anti-drift layer | live |
+| 2026-08-22 | source | README | My-Dragon / dev / | defines | owner working / testing method for building the container | live |
+| 2026-08-22 | planned | README | Journal Crystal | planned | future object | planned |
+| 2026-08-22 | planned | README | Subject graph object | planned | future object | planned |
+
+**Return:** this README  
+**Evidence rule:** Point only. Do not copy the layer below.
+
+---
+
+## Boot / Load Process
+
+1. Read this README first (understand the project).
+2. Load the live Shard (operating rules).
+3. Check for a sandbox ORB for this window.
+4. If none → load First-ORB-Template and review newest history ORB.
+5. Once an ORB is loaded, treat it as the primary source for the rest of the window.
+6. Only ask “which window / which project” when the loaded source material does not already answer the question.
+
+**Discipline note**  
+The load walk exists to reach the ORB.  
+After the ORB is loaded, source material that has just been loaded outranks the generic script.  
+This prevents the high-drift error of re-asking questions the ORB has already answered.
+
+Orbs are history. System files are versions.  
+Never treat an ORB as the live system.  
+Never leave a working ORB in the My-Dragon root.
+
+---
+
+## Setup & Contribution
+
+**Recommended starting point**  
+Fork the project, then follow the container installation process using the connectors and storage you have available.
+
+**INSTALL.md**  
+INSTALL.md is primarily a testing method for AI instances.  
+The intended human path is to manually install and run the container on whatever connectors and storage the user actually has.  
+When an AI has direct file access, the same process may be tested there.
+
+**Current status**  
+- Issues may be reported.  
+- Merge requests will be considered.  
+- No formal support is offered at this point beyond sharing the method.  
+- Stable milestones are uploaded when they are ready.
+
+This is a human-owned, model-agnostic container. The public repository is the shared method; personal living data stays with the owner.
+
+---
+
+## Object Treatment of All Durable Files
+
+Every durable file in My-Dragon and in Personal-Development (and other project knowledge folders) is treated as an **Object**.
+
+**Sandbox exception**  
+Ephemeral sandbox drafts stay outside the Object requirement until they are promoted.  
+New information brought into the sandbox may optionally receive Object treatment as a draft (header + Source fields) so that promotion later is clean. This is optional, not required, while the material remains in sandbox.
+
+### Required header fields (when treated as Object)
+- Header (Type, Status, Revised)
+- Source — how the material entered (scan, PDF, jpeg, pasted, voice, etc.)
+- File location
+- Name of file
+- Object type — system | user
+- File type — system | coursework | reference | journal | note | other
+- Use — readable | voice-readable | study material | etc.
+- Copyrighted — yes / no
+
+### Edit rules
+- **Non-copyrighted material** — may be edited freely.
+- **Copyrighted material** — body remains full verbatim and is **not editable**.  
+  Only non-copyrighted additions are allowed: headers, footers, graph links, and section markers.  
+  Do not alter, paraphrase, or replace the protected body text.
+
+### Graph and structural rules
+- Graphs may point upstream to parent Objects.
+- Graphs may point to internal sections of the same material (Part 1, 2, 3, etc.).
+- Notes and journals created from material may link **both directions** to the source Object.
+- The same bidirectional linking applies to journals and to sections within them.
+- **Any structural change** (including new or modified graph Edges) follows Write Protection.  
+  Do not automatically create or update graph links.
+- A graph Edge is a structural change to an Object. New instances load this rule via README + Shard Edge; ORBs record window activity only and do not restate the law.
+
+---
+
+## Durable Processes
+
+**Source-over-script discipline**  
+When a just-loaded source (ORB, Crystal, or thread review) already answers a scripted question, follow the source.  
+Do not re-ask as if the situation were ambiguous.  
+Name the conflict if the script and the source appear to disagree, then follow the source.
+
+**Write Protection (Rule 7)**  
+sandbox → review content + exact destination → explicit permission → write → verify  
+
+Applies to file creation, content writes, and structural changes (including graph Edges).  
+Do not automatically create or update graph links.
+
+**Graph discipline**
+- kind: yours · insight · source · planned
+- status flip: draft → reviewed → live
+- Containers point both ways
+- Replace, don’t orphan
+- After Drive write, stamp file ID on the graph
+- Check sandbox first for an existing Orb; do not spawn parallel orbs for the same window
+- Do not automatically create or update graph links
+
+**ORB as Object**
+- Header + Dragon Stack + Edges table
+- Date headers for knowledge/discovery sections
+- Park temporary recovered value clearly
+- Thin body; point instead of copy
+- Full Write Protection
+- Never leave working ORB in root
+- Once loaded, the ORB becomes the primary source for the remainder of the window
+
+**Skills layers**
+1. Grok working + testing
+2. Drive tested (dated copies)
+3. Dev / staging
+4. GitHub public (clean, no personal information)
+
+**Domain separation**
+- Core system skills live with the system
+- Personal or project skills live under their own project folders
+
+---
+
+**End of 2026-08-22-1834-readme-object**  
+(External name when live: README.md)
