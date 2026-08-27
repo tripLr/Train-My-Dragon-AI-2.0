@@ -2,6 +2,9 @@
 
 # Train Your Dragon AI — Dragon 2.0
 
+**Status:** Live — My Dragon project object folder (public method)
+**Updated:** 2026-08-27
+
 **External name:** README.md  
 **Internal name:** 2026-08-22-1952-readme-object  
 **Object type:** system  
