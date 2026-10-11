@@ -1,99 +1,53 @@
-# Origin
-
-**Train Your Dragon AI**  
-**Public architecture:** Dragon 2.0  
-**Origin lineage:** PARA-MOC-dragon → Dragon 2.0 modular kernel  
-**Original public method version:** 2026-08-01  
-**Internal revision with education layer:** 2026-08-16
-
+---
+name: ORIGIN.md
+internal_name: 2026-10-09-1958-origin-template
+object_type: system
+file_type: system
+type: system (why, narrative template)
+status: template
+version: v1.0
+date: 2026-10-09
+revised: 2026-10-09-1958 PT
+author: tripLr
+owner: Owner
+location: repository root
+license: MIT
 ---
 
-## The Story — Necessity of the Invention
+# Origin (template)
 
-Train Your Dragon AI did not begin as an attempt to design an AI architecture.
+This file is a **template**. Fill it in with your own story, then keep it as the narrative record of why your Dragon exists and how it changed. Replace every prompt in `[brackets]`. Delete this paragraph when you are done.
 
-It began because I needed a practical way to do personal-development work while working as a commercial truck driver.
+## Why this exists
+[What problem were you trying to solve? What were you doing when you ran into it?]
+[What did you try first, and where did it break? (For example: a long chat that lost its early context, notes trapped in one app, a new AI that knew nothing about you.)]
+[What did you decide you needed? Write it as one sentence.]
 
-The only substantial time I had available to work through the training was while I was out driving and working. But the course required journaling and written reflection.
+## The core idea
+[In your own words: what lives outside the AI, and what does the AI do with it?]
 
-That created a simple physical problem.
+## Vocabulary you adopted
+| Term | What it means in your system |
+|---|---|
+| Object | [A file with a header, a location and edges to other files] |
+| Crystal | [An index file for one folder or project] |
+| [Your term] | [Its job] |
 
-I could think while driving.  
-I could talk while driving.  
-I could listen to training material while driving.
+## Timeline
+| Date | Event |
+|---|---|
+| YYYY-MM-DD | [First experiment] |
+| YYYY-MM-DD | [What you changed and why] |
 
-I could not safely sit there typing journal entries while driving a commercial truck.
+## Design lessons that survived
+- [A rule you learned the hard way]
+- [Another]
 
-So voice wasn't merely a convenient feature.
+## Continuity principle
+[What must still be true if your AI, your app or your storage changes?]
 
-**Voice was what could make the course workable in the environment where I actually had time to do it.**
+## Edges
+up:: [[README.md]] (the why this narrative expands on) {date: YYYY-MM-DD, by: Owner, src: build, status: proposed}
+mentions:: [[Dragon-Object-Schema.md]] (the rules your objects follow) {date: YYYY-MM-DD, by: Owner, src: build, status: proposed}
 
-I wanted to interact by voice with text from private training material. I wanted an AI to help me work through that material conversationally, let me journal by speaking, and turn those conversations into durable written work that I could return to later.
-
-At first, I tried doing this directly inside an AI instance.
-
-I could upload training text, discuss it, reflect on it, and begin building a useful journal.
-
-And it worked—until it didn't.
-
-As the conversations became longer, context-window limits appeared. Earlier information became unreliable or inaccessible to the active AI even though I had already done the work.
-
-Important insights were becoming trapped inside individual conversations.
-
-A new AI instance meant teaching the system again.
-
-I experimented with putting specific operating rules into the AI's native memory so that a new instance would already understand how I wanted to work.
-
-That helped.
-
-But it also exposed the real problem.
-
-I wasn't trying to create a better prompt.
-
-I needed a persistent system outside the AI that could survive the AI.
-
-That necessity became **Train Your Dragon AI**.
-
----
-
-## Dragon 2.0 — 16 August 2026 Review
-
-**Internal Revision:** 4.0  
-**Date:** 2026-08-16  
-
-### Simple structure of the current system
-
-```
-Physical container          →  User’s real files (Drive, local, GitHub…)
-└── AI container (Shard)    →  Modular kernel / operating definition
-    ├── Looking Glass       →  How we operate (contract)
-    ├── Ocular              →  How the human sends/receives
-    ├── Spec-Lens           →  What this AI can see and do
-    ├── ORB rules           →  Working container handling
-    └── Crystal rules       →  Durable project object handling
-
-Working container (ORB)     →  Live session continuity
-Durable container (Crystal) →  Project / domain knowledge
-```
-
-### What changed and why
-
-Real use showed that complex operating rules stored in AI-native memory and scattered process files produced drift. Rules became incomplete or inconsistent across sessions.
-
-Response:
-
-- The Shard became the single controlled external operating definition (modular kernel).
-- Crystals became the primary durable project objects (superseding most uses of Gems).
-- ORBs remained the working containers.
-- Looking Glass, Ocular, Spec-Lens, and object instructions were organized as clear sections inside the Shard.
-- Global Write Flow and upstream/downstream checks were reinforced.
-- A full first-install education layer was added so new users and AIs do not have to read every document to understand agency, privacy, and write rules.
-
-The public architecture remains **Dragon 2.0**.  
-This internal revision records the simplification made to reduce drift while keeping human ownership and continuity.
-
-### Continuity with earlier design
-
-Earlier concepts (Gems, Facets, Edges, OPELs, Nest, Hoard) are not erased.  
-They are preserved in history folders and in the Dragon-History Crystal.  
-The current model keeps what proved essential and reduces the number of places operating knowledge can go out of sync.
+**End of ORIGIN.md (template)**
