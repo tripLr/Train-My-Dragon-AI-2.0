@@ -1,13 +1,13 @@
 ---
 name: AI-Work-Crystal.md
-internal_name: YYYY-MM-DD-HHMM-AI-Work-Crystal
+internal_name: 2026-10-10-2358-AI-Work-Crystal
 object_type: system
 file_type: crystal
 type: crystal (project: AI work)
 status: template
-version: v1.0
+version: v1.1
 date: 2026-10-09
-revised: 2026-10-09-1958 PT
+revised: 2026-10-10-2358 PT
 author: tripLr
 owner: Owner
 license: MIT
@@ -21,10 +21,10 @@ location: Projects / AI-Work / AI-Work-Crystal.md
 ## Folder map
 - `Projects / AI-Work /` (this project folder)
   - `AI-Work-Crystal.md` (this file)
-  - `processes.md` (repeatable procedures any AI follows instead of being retrained)
-  - `tasks.md` (daily or recurring work for the bots or the owner)
+  - `processes.md` (repeatable procedures any AI follows instead of being retrained; 21 numbered processes, numbers are stable)
+  - `tasks.md` (daily or recurring work for the bots or the owner; 6 numbered tasks)
   - `Bots/Example-Bot/Example-Bot-Crystal.md` (template bot Crystal; copy per bot)
-  - `Conversations/` (conversation records, written only when the owner asks; see processes.md Process 14)
+  - `Conversations/` (conversation records, written only when the owner asks; see processes.md Process 16, and Process 18 for importing many)
   - `Object-History/` (dated copies of every superseded version of this project's objects; archive-first)
 
 ## Rules
@@ -37,9 +37,9 @@ location: Projects / AI-Work / AI-Work-Crystal.md
 
 | Name | Version | Status | Last touched (by, when) | One-line summary |
 |---|---|---|---|---|
-| AI-Work-Crystal.md | v1.0 | template | Owner, YYYY-MM-DD | This Crystal |
-| processes.md | v1.0 | template | Owner, YYYY-MM-DD | Repeatable procedures |
-| tasks.md | v1.0 | template | Owner, YYYY-MM-DD | Daily and recurring work |
+| AI-Work-Crystal.md | v1.1 | template | Owner, YYYY-MM-DD | This Crystal |
+| processes.md | v1.0 | template | Owner, YYYY-MM-DD | Repeatable procedures (merged set, 21 processes) |
+| tasks.md | v1.0 | template | Owner, YYYY-MM-DD | Daily and recurring work (6 tasks) |
 | Example-Bot-Crystal.md | v1.0 | template | Owner, YYYY-MM-DD | Template bot Crystal (Bots/Example-Bot/) |
 | *(add one row per object you put in this folder)* | | | | |
 
@@ -65,6 +65,7 @@ mentions:: [[Dragon-Object-Schema.md]] (the rules these objects follow) {date: 2
 **Evidence rule:** Point only. Do not copy the layer below.
 
 ## Version log
+- v1.1 (2026-10-10-2358 PT): pointers updated to the merged `processes.md` and `tasks.md` (processes 1 to 21, tasks 1 to 6; conversation object is Process 16, batch import Process 18).
 - v1.0 (2026-10-09): public starter.
 
-**End of AI-Work-Crystal.md**
+**End of AI-Work-Crystal.md (v1.1)**

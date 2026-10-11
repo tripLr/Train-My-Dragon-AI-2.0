@@ -1,13 +1,13 @@
 ---
 name: AGENTS.md
-internal_name: 2026-10-09-2005-agents-public
+internal_name: 2026-10-10-2358-agents-public
 object_type: system
 file_type: rules
 type: system (contract: operating rules)
 status: template
-version: v1.1
+version: v1.2
 date: 2026-10-09
-revised: 2026-10-09-2005 PT
+revised: 2026-10-10-2358 PT
 author: tripLr
 owner: Owner
 source: condensed from a working private AGENTS file (universal rules only)
@@ -32,7 +32,7 @@ license: MIT
 13. **Staging:** new captures and assistant drafts land in a staging inbox first. They are never live files. The owner examines them, names the destination, and gives permission before anything is filed.
 14. **Processes and tasks:** `processes.md` and `tasks.md` (in `Projects / AI-Work`, the first project) are the "how". Processes are repeatable procedures: any AI follows them instead of being retrained on the same job. Tasks are daily or recurring work. A task with implications for later work is elevated to a process.
 15. **Orbs:** orbs are optional, thin session records, a backup and accountability aid for when a long thread loses context or work moves between AIs. Name them `YYYY-MM-DD-HHMM-<source>-orb.md`, keep them in `Dragon-Orb-History` (indexed by `Orb-History-Crystal.md`; copy `Blank-Orb-Template.md` to start one), and do not merge orbs from different AIs; point across instead.
-16. **Public and private:** this file is public. A working folder is private. Nothing from it goes to a public repository unless the owner has approved that exact file after a redaction pass (see `processes.md`, Process 2), and no secrets or personal details belong in any shared file.
+16. **Public and private:** this file is public. A working folder is private. Nothing from it goes to a public repository unless the owner has approved that exact file after a redaction pass (see `processes.md`, Process 20, and Process 19 for publishing), and no secrets or personal details belong in any shared file.
 17. **Reports:** plain English, times stated with their time zone, files named by name plus location.
 
 ## Edges
@@ -41,4 +41,4 @@ mentions:: [[processes.md]] (Projects / AI-Work; repeatable procedures) {date: 2
 mentions:: [[tasks.md]] (Projects / AI-Work; daily and recurring work) {date: 2026-10-09, by: tripLr, src: build, status: proposed}
 up:: [[README.md]] (root index: why this repository exists and how it is laid out) {date: 2026-10-09, by: tripLr, src: build, status: proposed}
 
-**End of AGENTS.md (Dragon, public) v1.1**
+**End of AGENTS.md (Dragon, public) v1.2**

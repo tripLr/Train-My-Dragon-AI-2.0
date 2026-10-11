@@ -1,13 +1,13 @@
 ---
 name: README.md
-internal_name: 2026-10-09-2005-readme
+internal_name: 2026-10-10-2358-readme
 object_type: system
 file_type: system
 type: system (why; root index)
 status: live
-version: v1.1
+version: v1.2
 date: 2026-10-09
-revised: 2026-10-09-2005 PT
+revised: 2026-10-10-2358 PT
 author: tripLr
 owner: Owner
 location: repository root
@@ -62,13 +62,19 @@ The root holds four files and the folders. Everything else sits in a folder.
 
 This is a V1 starter set, **not** a one-click install. The contracts and the processes are the valuable part; the folders and Crystals are templates to fill in. See [Resources/INSTALL.md](Resources/INSTALL.md).
 
+## Branches: `main` and `dev`
+
+- **`main` is the stable branch.** What you clone by default. Fixes to the processes, tasks, contracts and Crystals are made here, so the repository always matches the current working version.
+- **`dev` is staging for the next major upgrade.** Bigger changes that are not ready, or that would change the structure for everyone, are built there first and merged into `main` only when the upgrade is ready.
+- **Why two:** a fix should not have to wait for a big upgrade, and a big upgrade should not break the stable copy while it is built. If you fork this to make your own, start from `main`.
+
 ## Object table (root index)
 
 | Name | Location | Version | Status | One-line summary |
 |---|---|---|---|---|
-| README.md | root | v1.1 | live | This file |
+| README.md | root | v1.2 | live | This file |
 | ORIGIN.md | root | v1.0 | template | Your story (fill in) |
-| AGENTS.md | root | v1.1 | template | Operating contract for any AI |
+| AGENTS.md | root | v1.2 | template | Operating contract for any AI |
 | LICENSE | root | n/a | live | MIT |
 | Dragon-Object-Schema.md | Resources | v2.4 | live | File contract |
 | INSTALL.md | Resources | v1.1 | live | First steps |
